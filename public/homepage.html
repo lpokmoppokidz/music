@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#135bec",
+              "hover-light": "rgba(0,0,0,0.05)",
+              "hover-dark": "rgba(255,255,255,0.05)",
+              "border-light": "#e5e7eb",
+              "border-dark": "#333333",
+              "text-light": "#1f2937",
+              "text-dark": "#f3f4f6",
+              "text-muted-light": "#6b7280",
+              "text-muted-dark": "#9ca3af",
+              "background-light": "#ffffff",
+              "background-dark": "#121212",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex flex-col font-sans"
+  >
+    <div class="flex flex-1 overflow-hidden">
+      <aside
+        class="w-64 border-r border-border-light dark:border-border-dark hidden md:flex flex-col"
+      >
+        <div class="p-6">
+          <h1 class="text-xl font-bold text-primary flex items-center">
+            <span class="material-icons-outlined mr-2">library_music</span>
+            EzConv
+          </h1>
+        </div>
+        <nav class="flex-1 px-4 space-y-1">
+          <a
+            class="flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-hover-light dark:bg-hover-dark text-primary"
+            href="#"
+          >
+            <span class="material-icons-outlined mr-3 text-lg">home</span> Home
+          </a>
+          <a
+            class="flex items-center px-4 py-2 text-sm font-medium rounded-lg text-text-muted-light dark:text-text-muted-dark hover:bg-hover-light dark:hover:bg-hover-dark transition-colors"
+            href="#"
+          >
+            <span class="material-icons-outlined mr-3 text-lg">search</span>
+            Search
+          </a>
+          <a
+            class="flex items-center px-4 py-2 text-sm font-medium rounded-lg text-text-muted-light dark:text-text-muted-dark hover:bg-hover-light dark:hover:bg-hover-dark transition-colors"
+            href="#"
+          >
+            <span class="material-icons-outlined mr-3 text-lg"
+              >library_music</span
+            >
+            Your Library
+          </a>
+          <div
+            class="pt-6 pb-2 px-4 text-xs font-bold text-text-muted-light dark:text-text-muted-dark uppercase tracking-wider"
+          >
+            Playlists
+          </div>
+          <a
+            class="flex items-center px-4 py-2 text-sm font-medium rounded-lg text-text-muted-light dark:text-text-muted-dark hover:bg-hover-light dark:hover:bg-hover-dark transition-colors"
+            href="#"
+          >
+            <span class="material-icons-outlined mr-3 text-lg">add_box</span>
+            Create Playlist
+          </a>
+        </nav>
+        <div class="p-4 border-t border-border-light dark:border-border-dark">
+          <div
+            class="bg-card-light dark:bg-card-dark rounded-lg p-4 border border-border-light dark:border-border-dark"
+          >
+            <p
+              class="text-xs font-semibold text-text-muted-light dark:text-text-muted-dark mb-2"
+            >
+              PRO PLAN
+            </p>
+            <p
+              class="text-xs text-text-muted-light dark:text-text-muted-dark mb-3"
+            >
+              Unlimited conversions and high-quality audio.
+            </p>
+            <button
+              class="w-full py-1.5 px-3 bg-primary text-white text-xs font-bold rounded shadow-sm hover:bg-blue-600 transition-colors"
+            >
+              Upgrade Now
+            </button>
+          </div>
+        </div>
+      </aside>
+      <main
+        class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark"
+      >
+        <header
+          class="h-16 border-b border-border-light dark:border-border-dark flex items-center justify-between px-8 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10"
+        >
+          <div class="flex items-center space-x-4">
+            <button
+              class="w-8 h-8 rounded-full bg-hover-light dark:bg-hover-dark flex items-center justify-center"
+            >
+              <span class="material-icons-outlined text-sm">chevron_left</span>
+            </button>
+            <button
+              class="w-8 h-8 rounded-full bg-hover-light dark:bg-hover-dark flex items-center justify-center"
+            >
+              <span class="material-icons-outlined text-sm">chevron_right</span>
+            </button>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button
+              class="px-4 py-1.5 border border-border-light dark:border-border-dark rounded-full text-xs font-bold hover:bg-hover-light dark:hover:bg-hover-dark transition-colors"
+            >
+              Explore Premium
+            </button>
+            <button
+              class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center overflow-hidden"
+            >
+              <span class="material-icons-outlined text-lg">person</span>
+            </button>
+          </div>
+        </header>
+        <div class="p-8">
+          <div class="mb-8">
+            <h2
+              class="text-2xl font-bold text-text-light dark:text-text-dark mb-6"
+            >
+              Good evening
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div
+                class="flex items-center bg-hover-light dark:bg-hover-dark rounded-md overflow-hidden cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-blue-100 flex items-center justify-center"
+                >
+                  <span class="material-icons-outlined text-primary"
+                    >favorite</span
+                  >
+                </div>
+                <span class="ml-4 font-bold text-sm">Liked Songs</span>
+                <button
+                  class="ml-auto mr-4 w-10 h-10 rounded-full bg-primary text-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-icons-outlined">play_arrow</span>
+                </button>
+              </div>
+              <div
+                class="flex items-center bg-hover-light dark:bg-hover-dark rounded-md overflow-hidden cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors group"
+              >
+                <div
+                  class="w-16 h-16 bg-purple-100 flex items-center justify-center"
+                >
+                  <span class="material-icons-outlined text-purple-600"
+                    >repeat</span
+                  >
+                </div>
+                <span class="ml-4 font-bold text-sm">Daily Mix 1</span>
+                <button
+                  class="ml-auto mr-4 w-10 h-10 rounded-full bg-primary text-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="material-icons-outlined">play_arrow</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h2
+              class="text-xl font-bold text-text-light dark:text-text-dark flex items-center"
+            >
+              <span class="material-icons-outlined mr-2 text-lg"
+                >auto_awesome</span
+              >
+              Recently Saved
+            </h2>
+          </div>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+          >
+            <div
+              class="bg-hover-light dark:bg-hover-dark p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer group"
+            >
+              <div
+                class="aspect-square bg-gray-200 dark:bg-gray-800 rounded-md mb-4 shadow-md relative overflow-hidden"
+              >
+                <img
+                  alt="Album"
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9oA8C8v4tU-D4PqY7z8E4N5J6K7L8M9O0P1Q2R3S4T5U6V7W8X9Y0Z1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q"
+                />
+                <button
+                  class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-primary text-white shadow-xl opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all flex items-center justify-center"
+                >
+                  <span class="material-icons-outlined text-lg"
+                    >play_arrow</span
+                  >
+                </button>
+              </div>
+              <div class="p-3">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <h3
+                      class="font-medium text-sm text-text-light dark:text-text-dark"
+                    >
+                      Deep House Mix
+                    </h3>
+                    <p
+                      class="text-xs text-text-muted-light dark:text-text-muted-dark mt-0.5"
+                    >
+                      House • 1h 12m
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group border border-dashed border-border-light dark:border-border-dark rounded flex flex-col items-center justify-center p-6 cursor-pointer hover:bg-hover-light dark:hover:bg-hover-dark transition-colors"
+            >
+              <span
+                class="material-icons-outlined text-3xl text-text-muted-light dark:text-text-muted-dark mb-2 group-hover:text-text-light dark:group-hover:text-text-dark transition-colors"
+                >add_circle_outline</span
+              >
+              <span
+                class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark group-hover:text-text-light dark:group-hover:text-text-dark transition-colors"
+                >New Playlist</span
+              >
+            </div>
+          </div>
+          <div class="mt-12 mb-4">
+            <h2
+              class="text-xl font-bold text-text-light dark:text-text-dark flex items-center"
+            >
+              <span class="material-icons-outlined mr-2 text-lg">history</span>
+              History
+            </h2>
+          </div>
+          <div class="w-full text-sm">
+            <div
+              class="flex items-center text-text-muted-light dark:text-text-muted-dark pb-2 border-b border-border-light dark:border-border-dark text-xs uppercase tracking-wide"
+            >
+              <div class="w-8">#</div>
+              <div class="flex-1">Title</div>
+              <div class="w-32 hidden md:block">Album</div>
+              <div class="w-24 text-right">Duration</div>
+            </div>
+            <div
+              class="group flex items-center py-2 hover:bg-hover-light dark:hover:bg-hover-dark rounded px-1 -mx-1 cursor-pointer transition-colors"
+            >
+              <div
+                class="w-8 text-text-muted-light dark:text-text-muted-dark group-hover:hidden"
+              >
+                1
+              </div>
+              <div
+                class="w-8 hidden group-hover:block text-text-light dark:text-text-dark"
+              >
+                <span class="material-icons-outlined text-sm">play_arrow</span>
+              </div>
+              <div
+                class="flex-1 font-medium text-text-light dark:text-text-dark"
+              >
+                Space Oddity
+              </div>
+              <div
+                class="w-32 text-text-muted-light dark:text-text-muted-dark hidden md:block"
+              >
+                Space Oddity
+              </div>
+              <div
+                class="w-24 text-right text-text-muted-light dark:text-text-muted-dark"
+              >
+                5:15
+              </div>
+            </div>
+            <div
+              class="group flex items-center py-2 hover:bg-hover-light dark:hover:bg-hover-dark rounded px-1 -mx-1 cursor-pointer transition-colors"
+            >
+              <div
+                class="w-8 text-text-muted-light dark:text-text-muted-dark group-hover:hidden"
+              >
+                2
+              </div>
+              <div
+                class="w-8 hidden group-hover:block text-text-light dark:text-text-dark"
+              >
+                <span class="material-icons-outlined text-sm">play_arrow</span>
+              </div>
+              <div
+                class="flex-1 font-medium text-text-light dark:text-text-dark"
+              >
+                Heroes
+              </div>
+              <div
+                class="w-32 text-text-muted-light dark:text-text-muted-dark hidden md:block"
+              >
+                Heroes
+              </div>
+              <div
+                class="w-24 text-right text-text-muted-light dark:text-text-muted-dark"
+              >
+                6:07
+              </div>
+            </div>
+            <div
+              class="group flex items-center py-2 hover:bg-hover-light dark:hover:bg-hover-dark rounded px-1 -mx-1 cursor-pointer transition-colors"
+            >
+              <div
+                class="w-8 text-text-muted-light dark:text-text-muted-dark group-hover:hidden"
+              >
+                3
+              </div>
+              <div
+                class="w-8 hidden group-hover:block text-text-light dark:text-text-dark"
+              >
+                <span class="material-icons-outlined text-sm">play_arrow</span>
+              </div>
+              <div
+                class="flex-1 font-medium text-text-light dark:text-text-dark"
+              >
+                Starman
+              </div>
+              <div
+                class="w-32 text-text-muted-light dark:text-text-muted-dark hidden md:block"
+              >
+                The Rise and Fall...
+              </div>
+              <div
+                class="w-24 text-right text-text-muted-light dark:text-text-muted-dark"
+              >
+                4:14
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer
+      class="h-20 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark flex items-center justify-between px-6 z-50"
+    >
+      <div class="flex items-center w-1/4">
+        <div
+          class="w-12 h-12 rounded overflow-hidden mr-3 bg-gray-200 shadow-sm relative group"
+        >
+          <img
+            alt="Album art"
+            class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa83PYTRzFh1wHmqCbdTvIOmCNdixO9Kim7E3gFfJIgwSOfIVNz3EHPTqIf6yzs7R6Lo5sKohgY2uCC2xOcy4R9ehDACpRacvQwy9GtPaa2kAvlGNhRX-W09N3gXxTCUY0ePFlKUZb_3R8HS-VcNKKeeblwlXWeEdcVJjpccWhjzzXD3ToS1pg-9gDBNjs6sDvUQ1EL7bd1WKXfX4vDmlChqGNhfZzI67alSx5eeHz7qOYjyupvtrOUB0Had3xcd1IBvdG2XWy3VHu"
+          />
+          <div
+            class="absolute inset-0 bg-black/10 hidden group-hover:flex items-center justify-center cursor-pointer"
+          >
+            <span class="material-icons-outlined text-white text-lg"
+              >open_in_full</span
+            >
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-sm font-semibold text-text-light dark:text-text-dark cursor-pointer hover:underline"
+            >Life on Mars?</span
+          >
+          <span
+            class="text-xs text-text-muted-light dark:text-text-muted-dark cursor-pointer hover:underline"
+            >David Bowie</span
+          >
+        </div>
+        <button
+          class="ml-4 text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors"
+        >
+          <span class="material-icons-outlined text-base">favorite_border</span>
+        </button>
+      </div>
+      <div class="flex flex-col items-center w-2/4">
+        <div class="flex items-center space-x-6 mb-1">
+          <button
+            class="text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+            title="Shuffle"
+          >
+            <span class="material-icons-outlined text-lg">shuffle</span>
+          </button>
+          <button
+            class="text-text-light dark:text-text-dark hover:scale-110 transition-transform"
+            title="Previous"
+          >
+            <span class="material-icons-outlined text-2xl">skip_previous</span>
+          </button>
+          <button
+            class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full hover:scale-105 transition-transform"
+            title="Play/Pause"
+          >
+            <span class="material-icons-outlined text-xl">play_arrow</span>
+          </button>
+          <button
+            class="text-text-light dark:text-text-dark hover:scale-110 transition-transform"
+            title="Next"
+          >
+            <span class="material-icons-outlined text-2xl">skip_next</span>
+          </button>
+          <button
+            class="text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+            title="Repeat"
+          >
+            <span class="material-icons-outlined text-lg">repeat</span>
+          </button>
+        </div>
+        <div
+          class="w-full max-w-md flex items-center space-x-2 text-xs text-text-muted-light dark:text-text-muted-dark font-mono"
+        >
+          <span>0:45</span>
+          <div
+            class="flex-1 h-1 bg-border-light dark:bg-border-dark rounded-full cursor-pointer relative group"
+          >
+            <div
+              class="absolute h-full bg-primary dark:bg-white rounded-full w-1/3 group-hover:bg-opacity-80"
+            ></div>
+            <div
+              class="absolute h-3 w-3 bg-white border border-gray-300 shadow rounded-full top-1/2 -mt-1.5 left-1/3 hidden group-hover:block"
+            ></div>
+          </div>
+          <span>3:48</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-end w-1/4 space-x-3">
+        <button
+          class="text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+        >
+          <span class="material-icons-outlined text-lg">lyrics</span>
+        </button>
+        <button
+          class="text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors"
+        >
+          <span class="material-icons-outlined text-lg">queue_music</span>
+        </button>
+        <div class="flex items-center space-x-2 group">
+          <span
+            class="material-icons-outlined text-lg text-text-muted-light dark:text-text-muted-dark"
+            >volume_up</span
+          >
+          <div
+            class="w-20 h-1 bg-border-light dark:bg-border-dark rounded-full cursor-pointer overflow-hidden"
+          >
+            <div
+              class="h-full bg-text-muted-light dark:bg-text-muted-dark w-2/3 group-hover:bg-primary dark:group-hover:bg-white transition-colors"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Simple script to toggle dark mode based on system preference initially
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </body>
+</html>
