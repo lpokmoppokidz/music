@@ -59,11 +59,13 @@ app.use((req, res) => {
 });
 
 async function startServer() {
-  await connectDB();
-
+  // Start listening immediately so Render detects the service is up
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+
+  // Then connect to the database
+  await connectDB();
 }
 
 startServer();
