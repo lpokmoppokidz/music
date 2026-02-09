@@ -45,7 +45,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // Serve frontend static files in production
-const distPath = path.resolve(__dirname, "../dist");
+const distPath = path.join(__dirname, "..", "dist");
 app.use(express.static(distPath));
 
 // Handle React Router - catch all routes and serve index.html
